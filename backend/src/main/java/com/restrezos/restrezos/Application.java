@@ -25,7 +25,7 @@ public class Application {
 	@Bean
 	CommandLineRunner runner() {
 		return args -> {
-			Reservation reservation = new Reservation(1, new Timestamp(0), new Timestamp(0), 1, 1, 1);
+			Reservation reservation = new Reservation(1, 5, new Timestamp(0), new Timestamp(0), 1, 1, 1);
 			log.info("Restaurant: " + reservation);
 		};
 	}

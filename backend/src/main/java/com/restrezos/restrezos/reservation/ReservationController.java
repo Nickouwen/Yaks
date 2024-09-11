@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
-
 
 @RestController
 @RequestMapping("/api/reservations")
@@ -35,7 +33,7 @@ public class ReservationController {
     Reservation findById(@PathVariable Integer id) {
         Optional<Reservation> reservation = reservationRepository.findById(id);
         if(reservation.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            throw new ReservationNotFoundException();
         }
         return reservation.get();
     }

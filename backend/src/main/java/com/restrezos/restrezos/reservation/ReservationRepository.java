@@ -39,7 +39,7 @@ public class ReservationRepository {
 
     @PostConstruct
     private void init() {
-        reservations.add(new Reservation(1, new Timestamp(0), new Timestamp(0), 1, 1, 1));
-        reservations.add(new Reservation(2, new Timestamp(0), new Timestamp(0), 1, 1, 1));
+        reservations.add(new Reservation(1, 5, new Timestamp(0), new Timestamp(0), 1, 1, 1));
+        reservations.add(new Reservation(2, 5, new Timestamp(0), new Timestamp(0), 1, 1, 1));
     }
 }
